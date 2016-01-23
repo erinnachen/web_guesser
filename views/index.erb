@@ -4,13 +4,15 @@
     <p>
       <%= message %>
       <br>
-      <% if message == "You got it right!" || message == "Please guess a number:"%>
+      <% if message == "You got it right!" %>
         <br>The SECRET NUMBER is <%= number %>
       <% end %>
     </p>
+    <% unless message == "You got it right!"%>
     <form>
       <input type='text' name='guess' />
       <input type='submit' value='Guess!' />
     </form>
+    <% end %>
 </body>
 </html>
